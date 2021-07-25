@@ -1,0 +1,83 @@
+<div fxLayout class="row wrap">
+
+  <div fxFlex class="grade-form">
+
+    <mat-card class="mat-elevation-z8">
+      <mat-card-title>Check Out</mat-card-title>
+      <mat-card-content>
+          <form fxLayout="row" fxLayoutGap="16px" [formGroup]="transcriptForm">
+            <mat-form-field fxFlex appearance="fill">
+              <mat-label>Customer Name</mat-label>
+              <input type="text" name="txtName" id="txtName" matInput formControlName="name"/>
+            </mat-form-field>
+
+            <mat-form-field fxFlex appearance="fill">
+              <mat-label>Customer Id</mat-label>
+              <input type="text" name="txtId" id="txtId" matInput formControlName="id"/>
+            </mat-form-field>
+
+            <mat-form-field fxFlex appearance="fill">
+              <mat-label>Customer Tel</mat-label>
+              <input type="text" name="txtTel" id="txtTel" matInput formControlName="tel"/>
+            </mat-form-field>
+          </form>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="mat-elevation-z8">
+    <mat-card-content>
+      <form fxLayout="column" fxLayoutGap="16px" [formGroup]="transcriptForm">
+        <mat-card-title>Services   Cost</mat-card-title>
+
+        <mat-checkbox labelPosition="before">Password Reset $39.99</mat-checkbox>
+        <mat-checkbox labelPosition="before">Spyware Removal $99.99</mat-checkbox>
+        <mat-checkbox labelPosition="before">RAM Upgrade $129.99</mat-checkbox>
+        <mat-checkbox labelPosition="before">Software Installation $49.99</mat-checkbox>
+        <mat-checkbox labelPosition="before">Tune-up $89.99</mat-checkbox>
+        <mat-checkbox labelPosition="before">Keyboard Cleaning $45.00</mat-checkbox>
+        <mat-checkbox labelPosition="before">Disk Clean-up $149.99</mat-checkbox>
+
+
+
+      </form>
+  </mat-card-content>
+</mat-card>
+
+    <mat-card class="mat-elevation-z8">
+      <mat-card-title>Standard Fees</mat-card-title>
+
+      <mat-card-content>
+          <form fxLayout="column" fxLayoutGap="16px" [formGroup]="transcriptForm">
+            <mat-form-field fxFlex appearance="fill">
+              <mat-label>Parts</mat-label>
+              <input type="text" name="txtParts" id="txtParts" matInput formControlName="parts"/>
+            </mat-form-field>
+
+            <mat-form-field fxFlex appearance="fill">
+              <mat-label>Hours</mat-label>
+              <mat-select formControlName="hour" required name="selectHour">
+                <mat-option *ngFor="let hour of selectableHours" [value]="hour">
+                  {{ hours }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </form>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+
+  </div>
+  <br /> <br />
+
+ <div fxLayout="row" fxLayoutGap="16px">
+   <div fxFlex class="gpa">
+
+     <mat-card class="mat-elevation-z8">
+       <mat-card-title style="text-align: right;">
+        <button>Total </button>
+      </mat-card-title>
+
+     </mat-card>
+
+    </div>
